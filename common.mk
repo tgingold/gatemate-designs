@@ -44,15 +44,6 @@ impl:
 jtag:
 	$(OFL) $(OFLFLAGS) -c dirtyJtag $(TOP)_00.cfg
 
-jtag-flash:
-	$(OFL) $(OFLFLAGS) -b gatemate_evb_jtag -f --verify $(TOP)_00.cfg
-
-spi:
-	$(OFL) $(OFLFLAGS) -b gatemate_evb_spi -m $(TOP)_00.cfg
-
-spi-flash:
-	$(OFL) $(OFLFLAGS) -b gatemate_evb_spi -f --verify $(TOP)_00.cfg
-
 all: synth impl jtag
 
 ## verilog simulation targets
